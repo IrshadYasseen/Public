@@ -1,2 +1,2 @@
 # Welcome to my public repo
-feel free to suggest changes.
+Feel free to suggest changes.
