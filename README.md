@@ -1,2 +1,2 @@
-# Public
-Will upload later.
+# Welcome to my public repo
+feel free to suggest changes.
