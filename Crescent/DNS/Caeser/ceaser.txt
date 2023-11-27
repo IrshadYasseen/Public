@@ -1,0 +1,40 @@
+//Ceaser chiper
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h> (toupper)
+
+void encrypt(char text[], int shift) {
+    int i;
+    char ch;
+    
+    for (i = 0; i < strlen(text); i++) {
+        ch = text[i];
+        ch = (ch + shift - 'a') % 26 + 'a';
+        text[i] = ch;
+    }
+}
+
+void decrypt(char text[], int shift) {
+    encrypt(text, -shift);
+}
+
+int main() {
+    char text[100];
+    int shift;
+    
+    printf("Enter text to encrypt: ");
+    fgets(text, sizeof(text), stdin);
+    text[strcspn(text, "\n")] = '\0'; // Remove the newline character
+    
+    printf("Enter the shift value: ");
+    scanf("%d", &shift);
+    
+    encrypt(text, shift);
+    printf("Encrypted text: %s\n", text);
+    
+    decrypt(text, shift);
+    printf("Decrypted text: %s\n", text);
+    
+    return 0;
+}

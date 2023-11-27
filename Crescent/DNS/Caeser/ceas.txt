@@ -1,0 +1,5 @@
+ceaser
+#include <string.h>  fgets(t,sizeof(t),stdin) 			t[stcpn(t,"\n")]= "\0"  		 printf("%s",t)
+#include <ctype.h>    toupper(char)        			tolower(chr)
+
+t[i]=(t[i]+1-'a')%26+'A';
