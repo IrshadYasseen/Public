@@ -1,0 +1,17 @@
+GCD
+
+#include <stdio.h>
+int main() 
+{
+    int a,r,b;
+    scanf("%d %d",&b,&a);
+    while (b != 0) 
+    {
+        printf("%d\t%d\t%d\t\n", r,a,b);   
+        r = a % b;
+        a = b;
+        b = r;
+    }
+    printf("GCD :%d",a);
+    return 0;
+}
