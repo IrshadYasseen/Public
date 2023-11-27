@@ -1,0 +1,40 @@
+RSA
+
+#include <stdio.h>
+#include <math.h>
+
+int encrypt(int plaintext, int e, int n) {
+    int ciphertext = fmod(pow(plaintext, e), n);
+    return ciphertext;
+}
+
+int decrypt(int ciphertext, int d, int n) {
+    int plaintext = fmod(pow(ciphertext, d), n);
+    return plaintext;
+}
+
+void main(){
+    double p = 3;
+    double q = 5;
+    double e = 3;
+    double d = 3;
+    
+    double n = p * q;
+    double phi = (p - 1) * (q - 1);
+    
+    int plaintext, ciphertext,decryptedtext;
+    
+    printf("Enter a plaintext message: ");
+    scanf("%d", &plaintext);
+    
+    ciphertext = encrypt(plaintext, e, n);
+    decryptedtext = decrypt(ciphertext, d, n);
+    
+
+    
+printf("Original message: %d\n", plaintext);
+printf("Encrypted message: %d\n", ciphertext);
+printf("Decrypted message: %d\n", decryptedtext);
+    
+    
+}
